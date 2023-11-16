@@ -1,4 +1,4 @@
-import random
+import secrets
 
 def hangman(word):
     wrong = 0
@@ -41,7 +41,7 @@ while True:
     player_words5 = input("Type a fith words to guess ")
     all_words = [player_words1, player_words2, player_words3, player_words4, player_words5]
     #random_word= ["cat", "dog", "horse", "sneake", "random"]
-    random_index = random.randint(0,len(all_words)-1)
+    random_index = secrets.SystemRandom().randint(0,len(all_words)-1)
     hangman(all_words[random_index])
     play_again = input("Want to play again? [Y/N] ")
     if play_again == 'N' or play_again == 'n':
